@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>スタッフ｜Re:Grace（リーグレイス）岐阜市加納の美容院</title>
+<meta name="description" content="Re:Grace（リーグレイス）のスタッフ紹介。トップスタイリストのTAKEYAMA、アイデザイナーのAYANO、亀田先輩、アシスタントのKANA。">
+<meta property="og:title" content="スタッフ｜Re:Grace（リーグレイス）">
+<meta property="og:description" content="岐阜市加納の美容院のスタッフ紹介。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #ffffff;
+    --beige: #f3eee6;
+    --stone: #ecebe8;
+    --ink: #1c1b19;
+    --sumi: #161514;
+    --line: #dcd7cf;
+    --text: #2a2825;
+    --mute: #7a746c;
+    --clay: #b49a7a;
+    --serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --sans: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { font-family: var(--sans); color: var(--text); background: var(--white); font-size: 14px; line-height: 1.75; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+  h1, h2 { font-family: var(--serif); font-weight: 500; color: var(--ink); }
+  h1 { font-size: 24px; line-height: 1.5; }
+
+  /* Header */
+  .top {
+    position: fixed; inset: 0 0 auto 0; z-index: 40; height: 60px;
+    background: rgba(255,255,255,0.96); border-bottom: 1px solid var(--line);
+  }
+  .top .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .mark { width: 33px; height: 44px; overflow: hidden; position: relative; flex: none; }
+  .mark img { position: absolute; width: 78px; height: 169px; max-width: none; left: -22px; top: -48px; }
+  .brand b { font-family: var(--serif); font-weight: 500; font-size: 16px; letter-spacing: 0.05em; }
+  .top-right { display: flex; align-items: center; gap: 12px; }
+  .top-reserve { font-size: 12px; text-decoration: none; padding: 9px 14px; border: 1px solid var(--ink); color: var(--ink); }
+  .burger {
+    width: 44px; height: 44px; background: none; border: 0; cursor: pointer;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
+  }
+  .burger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  .drawer {
+    position: fixed; inset: 0; z-index: 30; background: var(--white);
+    padding: 84px 22px 32px; display: none; flex-direction: column; justify-content: space-between;
+  }
+  .drawer.open { display: flex; }
+  .drawer nav { display: grid; grid-template-columns: 1fr; }
+  .drawer nav a { display: block; padding: 18px 0; border-bottom: 1px solid var(--line); text-decoration: none; font-family: var(--serif); font-size: 19px; color: var(--ink); }
+  .drawer .sub-links { font-size: 13px; color: var(--mute); display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+  .drawer .sub-links a { color: var(--mute); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 0 20px; border-radius: 2px;
+    background: var(--ink); color: var(--white); border: 1px solid var(--ink);
+    text-decoration: none; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+  }
+  .btn.line { background: transparent; color: var(--ink); }
+  .btn.sm { min-height: 36px; padding: 0 14px; font-size: 13px; }
+
+  /* Page head */
+  .page-head { padding: 96px 0 28px; }
+  .page-head p { font-size: 13px; color: var(--mute); margin-top: 6px; }
+  .crumb { font-size: 12px; color: var(--mute); margin-bottom: 8px; }
+  .crumb a { color: var(--mute); }
+
+  /* Owner feature: horizontal */
+  .owner { background: var(--beige); padding: 0; }
+  .owner .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 0; }
+  .owner .photo-box { background: #e4dccd; min-height: 340px; position: relative; overflow: hidden; }
+  .owner .photo-box img, .card .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .owner .text { padding: 36px 36px 36px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .owner .role { font-size: 12px; color: var(--mute); }
+  .owner h2 { font-size: 28px; margin: 2px 0 2px; }
+  .owner .kana { font-size: 12px; color: var(--mute); margin-bottom: 18px; }
+  .owner .say { font-family: var(--serif); font-size: 17px; color: var(--ink); line-height: 1.8; margin-bottom: 16px; }
+  .owner .meta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12px; color: var(--mute); }
+  .owner .meta span::before { content: ""; display: inline-block; width: 4px; height: 4px; background: var(--clay); border-radius: 50%; margin-right: 8px; vertical-align: middle; }
+
+  /* Team: 3 across, horizontal cards */
+  .team { padding: 56px 0 72px; }
+  .team-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 22px; gap: 16px; flex-wrap: wrap; }
+  .team-head p { font-size: 13px; color: var(--mute); }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { display: grid; grid-template-columns: 120px 1fr; background: var(--white); border: 1px solid var(--line); }
+  .card .photo { background: var(--stone); min-height: 150px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; color: var(--mute); }
+  .card .text { padding: 16px 18px; display: flex; flex-direction: column; justify-content: center; }
+  .card .role { font-size: 11px; color: var(--mute); }
+  .card h3 { font-family: var(--serif); font-weight: 500; font-size: 18px; color: var(--ink); margin: 2px 0 0; }
+  .card .kana { font-size: 11px; color: var(--mute); margin-bottom: 10px; }
+  .card .say { font-size: 13px; color: var(--text); }
+
+  /* Booking band */
+  .band { background: var(--sumi); color: #e9e5de; padding: 48px 0; }
+  .band .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .band h2 { color: #f5f2ec; font-size: 20px; }
+  .band p { font-size: 13px; color: #bdb7ad; }
+  .band .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .band .btn { background: var(--white); color: var(--ink); border-color: var(--white); }
+  .band .btn.line { background: transparent; color: var(--white); border-color: #6b665e; }
+
+  footer.site { padding: 26px 0 96px; font-size: 12px; color: var(--mute); }
+  footer.site .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  .bottom-bar { display: none; }
+  dialog.call {
+    border: 0; border-radius: 4px; padding: 28px 26px; max-width: 340px; width: calc(100% - 40px);
+    background: var(--white); color: var(--ink); box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+  }
+  dialog.call::backdrop { background: rgba(20, 19, 17, 0.5); }
+  dialog.call h3 { font-family: var(--serif); font-weight: 500; font-size: 18px; margin-bottom: 6px; }
+  dialog.call p { font-size: 13px; color: var(--mute); }
+  dialog.call .num { font-size: 20px; font-weight: 500; margin: 12px 0 20px; font-variant-numeric: tabular-nums; }
+  dialog.call .row { display: flex; gap: 8px; }
+  dialog.call .row .btn { flex: 1; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .burger span { transition: none; } }
+
+  @media (max-width: 900px) {
+    .top-reserve { display: none; }
+    .page-head { padding-top: 84px; }
+    .owner .wrap { grid-template-columns: 1fr; }
+    .owner .photo-box { min-height: 240px; }
+    .owner .text { padding: 26px 22px 30px; }
+    .team-grid { grid-template-columns: 1fr; }
+    .bottom-bar {
+      display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 35;
+      background: var(--white); border-top: 1px solid var(--line);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); gap: 10px;
+    }
+    .bottom-bar .btn { flex: 1; }
+    footer.site { padding-bottom: 96px; }
+  }
+  @media (max-width: 560px) {
+    .team-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Re:Grace トップへ">
+      <span class="mark" aria-hidden="true"><img src="S__12591108_0.jpg" alt="" width="869" height="1880"></span>
+      <b>Re:Grace</b>
+    </a>
+    <div class="top-right">
+      <a class="top-reserve" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">予約する</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="サイトメニュー">
+  <nav>
+    <a href="index.html#menu" data-close>メニュー</a>
+    <a href="staff.html" data-close>スタッフ</a>
+    <a href="index.html#access" data-close>アクセス</a>
+    <a href="index.html#book" data-close>予約</a>
+  </nav>
+  <div class="sub-links">
+    <button class="btn line sm" type="button" data-call>電話で相談する</button>
+    <a href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">ホットペッパービューティー</a>
+  </div>
+</div>
+
+<main>
+
+  <div class="page-head">
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">トップ</a> ／ スタッフ</div>
+      <h1>スタッフ</h1>
+      <p>お客様一人ひとりに、似あうスタイルをご提案します。</p>
+    </div>
+  </div>
+
+  <section class="owner" aria-label="トップスタイリスト">
+    <div class="wrap">
+      <div class="photo-box"><img src="regrace-staff-takeyama.jpg" alt="トップスタイリスト TAKEYAMA"></div>
+      <div class="text">
+        <div class="role">トップスタイリスト（歴15年）</div>
+        <h2>TAKEYAMA</h2>
+        <div class="kana">タケヤマ</div>
+        <p class="say">似あうスタイル、一緒に考えましょう♪</p>
+        <div class="meta">
+          <span>カウンセリングをしっかり行います</span>
+          <span>パーマ・メンズ・韓国スタイル</span>
+          <span>白髪染め・ハイライト・ヘッドスパ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap">
+      <div class="team-head">
+        <h2>その他のスタッフ</h2>
+        <p>ご予約時にスタイリストを指名できます。</p>
+      </div>
+      <div class="team-grid">
+        <article class="card">
+          <div class="photo"><img src="regrace-staff-ayano.jpg" alt="アイデザイナー AYANO"></div>
+          <div class="text">
+            <div class="role">アイデザイナー（歴4年）</div>
+            <h3>AYANO</h3>
+            <div class="kana">アヤノ</div>
+            <p class="say">癒やしの時間を一緒に過ごしましょう(^ー^)</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">写真</div>
+          <div class="text">
+            <div class="role">歴20年以上</div>
+            <h3>亀田先輩</h3>
+            <div class="kana">ミテイ</div>
+            <p class="say">受付が得意です！</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">写真</div>
+          <div class="text">
+            <div class="role">アシスタント</div>
+            <h3>KANA</h3>
+            <div class="kana">カナ</div>
+            <p class="say">癒やしの時間を一緒に過ごしましょう</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div>
+        <h2>ご指名・ご予約</h2>
+        <p>スタイリストを選んで、空席を確認できます。</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">空席を見て予約する</a>
+        <a class="btn line" href="index.html#menu">メニューを見る</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Re:Grace（リーグレイス）｜岐阜市加納竜興町2丁目16 メゾンアルファ</span>
+    <a href="index.html">トップへ戻る</a>
+  </div>
+</footer>
+
+<div class="bottom-bar">
+  <button class="btn line" type="button" data-call>電話する</button>
+  <a class="btn" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">予約する</a>
+</div>
+
+<dialog class="call" id="callDialog" aria-labelledby="callTitle">
+  <h3 id="callTitle">お店に電話しますか？</h3>
+  <p>次の番号に電話をかけます。</p>
+  <div class="num">058-214-3885</div>
+  <div class="row">
+    <button class="btn line" type="button" id="callCancel">やめる</button>
+    <a class="btn" href="tel:0582143885">電話をかける</a>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    var burger = document.getElementById('burger');
+    var drawer = document.getElementById('drawer');
+    function setDrawer(open) {
+      drawer.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', function () { setDrawer(!drawer.classList.contains('open')); });
+    drawer.querySelectorAll('[data-close]').forEach(function (a) {
+      a.addEventListener('click', function () { setDrawer(false); });
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setDrawer(false); });
+
+    var dialog = document.getElementById('callDialog');
+    document.getElementById('callCancel').addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+    document.querySelectorAll('[data-call]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setDrawer(false);
+        if (typeof dialog.showModal === 'function') { dialog.showModal(); }
+        else { window.location.href = 'tel:0582143885'; }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Re:Grace（リーグレイス）｜岐阜市加納の美容院</title>
+<meta name="description" content="岐阜市加納の美容院 Re:Grace（リーグレイス）。再現性の高いカットと髪質改善。メンズ大歓迎、学割あり。">
+<meta property="og:title" content="Re:Grace（リーグレイス）｜岐阜市加納の美容院">
+<meta property="og:description" content="再現性の高いカットと髪質改善。メンズ大歓迎、学割あり。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Re:Grace（リーグレイス）",
+  "telephone": "058-214-3885",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "加納竜興町2丁目16 メゾンアルファ",
+    "addressLocality": "岐阜市",
+    "addressRegion": "岐阜県",
+    "addressCountry": "JP"
+  },
+  "openingHours": "Mo-Su 09:00-20:00",
+  "sameAs": [
+    "https://www.instagram.com/regrace_2026.06",
+    "https://beauty.hotpepper.jp/slnH000808643/"
+  ]
+}
+</script>
+<style>
+  :root {
+    --white: #ffffff;
+    --beige: #f3eee6;
+    --stone: #ecebe8;
+    --ink: #1c1b19;
+    --sumi: #161514;
+    --line: #dcd7cf;
+    --text: #2a2825;
+    --mute: #7a746c;
+    --clay: #b49a7a;
+    --serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --sans: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { font-family: var(--sans); color: var(--text); background: var(--white); font-size: 14px; line-height: 1.75; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.5; color: var(--ink); }
+  .eyebrow-text { font-size: 12px; color: var(--mute); margin-top: 2px; }
+
+  /* Header */
+  .top {
+    position: fixed; inset: 0 0 auto 0; z-index: 40; height: 60px;
+    background: rgba(255,255,255,0.96); border-bottom: 1px solid var(--line);
+  }
+  .top .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .mark { width: 33px; height: 44px; overflow: hidden; position: relative; flex: none; }
+  .mark img { position: absolute; width: 78px; height: 169px; max-width: none; left: -22px; top: -48px; }
+  .brand b { font-family: var(--serif); font-weight: 500; font-size: 16px; letter-spacing: 0.05em; }
+  .top-right { display: flex; align-items: center; gap: 12px; }
+  .top-reserve {
+    font-size: 12px; text-decoration: none; padding: 9px 14px; border: 1px solid var(--ink); color: var(--ink);
+  }
+  .burger {
+    width: 44px; height: 44px; background: none; border: 0; cursor: pointer;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
+  }
+  .burger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  /* Drawer menu */
+  .drawer {
+    position: fixed; inset: 0; z-index: 30; background: var(--white);
+    padding: 84px 22px 32px; display: none; flex-direction: column; justify-content: space-between;
+  }
+  .drawer.open { display: flex; }
+  .drawer nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+  .drawer nav a {
+    display: block; padding: 18px 0; border-bottom: 1px solid var(--line);
+    text-decoration: none; font-family: var(--serif); font-size: 19px; color: var(--ink);
+  }
+  .drawer .sub-links { font-size: 13px; color: var(--mute); display: flex; gap: 18px; flex-wrap: wrap; }
+  .drawer .sub-links a { color: var(--mute); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 46px; padding: 0 22px; border-radius: 2px;
+    background: var(--ink); color: var(--white); border: 1px solid var(--ink);
+    text-decoration: none; font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit;
+  }
+  .btn.line { background: transparent; color: var(--ink); }
+  .btn.sm { min-height: 38px; padding: 0 14px; font-size: 13px; }
+
+  /* Hero */
+  .hero { padding: 96px 0 56px; background: var(--white); }
+  .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .lockup { width: 340px; height: 123px; overflow: hidden; position: relative; margin: 0 auto; }
+  .lockup img { position: absolute; width: 389px; height: 841px; max-width: none; left: -25px; top: -360px; }
+  .hero-copy p { color: var(--mute); margin: 14px 0 22px; max-width: 26em; }
+  .hero-copy .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .facts { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 22px; font-size: 12px; color: var(--mute); }
+  .facts span { padding-left: 12px; position: relative; }
+  .facts span::before { content: ""; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: var(--clay); border-radius: 50%; }
+
+  /* Bands */
+  .band { padding: 64px 0; }
+  .band.beige { background: var(--beige); }
+  .band.stone { background: var(--stone); }
+  .band.sumi { background: var(--sumi); color: #e9e5de; }
+  .band.sumi h2 { color: #f5f2ec; }
+  .band-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 26px; flex-wrap: wrap; }
+
+  /* Concept: three in a row */
+  .concept { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); }
+  .concept-item { display: flex; align-items: center; gap: 14px; padding: 18px 20px 4px; }
+  .concept-item + .concept-item { border-left: 1px solid var(--line); }
+  .concept-item img { width: 56px; height: 56px; flex: none; object-fit: contain; mix-blend-mode: multiply; }
+  .concept-item h3 { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.5; }
+  .concept-item h3 mark {
+    background: linear-gradient(transparent 91%, #b49a7a 91%, #b49a7a 100%, transparent 100%);
+    color: inherit; padding: 0 2px;
+  }
+  .concept-item p { font-size: 12px; color: var(--mute); line-height: 1.6; margin-top: 2px; }
+
+  /* Menu */
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
+  .tabs a {
+    font-size: 13px; text-decoration: none; padding: 7px 14px; border: 1px solid var(--line); color: var(--text); border-radius: 999px;
+  }
+  .tabs a:hover { border-color: var(--ink); }
+  .menu-block { margin-bottom: 28px; }
+  .menu-block h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--ink); padding-bottom: 8px; border-bottom: 1px solid var(--ink); margin-bottom: 0; }
+  .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 28px; }
+  .menu-grid li {
+    list-style: none; display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13px;
+  }
+  .menu-grid li small { display: block; color: var(--mute); font-size: 11px; }
+  .menu-grid li b { white-space: nowrap; font-weight: 500; font-variant-numeric: tabular-nums; color: var(--ink); }
+  .menu-grid ul { list-style: none; }
+  .menu-note { font-size: 12px; color: var(--mute); margin-top: 8px; }
+  .picks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0 8px; }
+  .pick { background: var(--beige); padding: 16px 18px; }
+  .pick small { font-size: 11px; color: var(--mute); display: block; }
+  .pick b { display: block; font-size: 15px; font-weight: 500; color: var(--ink); margin: 2px 0 4px; }
+  .pick span { font-size: 13px; color: var(--ink); }
+  .pick s { font-size: 11px; color: var(--mute); margin-left: 6px; }
+  .pick-note { font-size: 11px; color: var(--mute); }
+
+  /* Access: horizontal info */
+  .access-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .access-row div { background: var(--white); padding: 18px 20px; }
+  .access-row h3 { font-size: 12px; color: var(--mute); font-weight: 500; margin-bottom: 4px; }
+  .access-row p { font-size: 13px; color: var(--ink); }
+  .access-row .tel { font-size: 17px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .access-row .tel-btn { margin-top: 10px; }
+  .access-links { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+
+  /* Booking band */
+  .book { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .book p { font-size: 13px; color: #bdb7ad; max-width: 38em; }
+  .book .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .band.sumi .btn { background: var(--white); color: var(--ink); border-color: var(--white); }
+  .band.sumi .btn.line { background: transparent; color: var(--white); border-color: #6b665e; }
+
+  footer.site { padding: 26px 0 96px; font-size: 12px; color: var(--mute); background: var(--white); }
+  footer.site .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  /* Mobile bottom bar */
+  .bottom-bar { display: none; }
+
+  /* Call dialog */
+  dialog.call {
+    border: 0; border-radius: 4px; padding: 28px 26px; max-width: 340px; width: calc(100% - 40px);
+    background: var(--white); color: var(--ink); box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+  }
+  dialog.call::backdrop { background: rgba(20, 19, 17, 0.5); }
+  dialog.call h3 { font-family: var(--serif); font-weight: 500; font-size: 18px; margin-bottom: 6px; }
+  dialog.call p { font-size: 13px; color: var(--mute); }
+  dialog.call .num { font-size: 20px; font-weight: 500; margin: 12px 0 20px; font-variant-numeric: tabular-nums; }
+  dialog.call .row { display: flex; gap: 8px; }
+  dialog.call .row .btn { flex: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .burger span { transition: none; }
+  }
+
+  @media (max-width: 900px) {
+    .top-reserve { display: none; }
+    .hero { padding: 84px 0 40px; }
+    .hero .wrap { grid-template-columns: 1fr; gap: 22px; text-align: center; }
+    .hero-copy p { margin-left: auto; margin-right: auto; }
+    .hero-copy .actions { justify-content: center; }
+    .facts { justify-content: center; }
+    .concept { grid-template-columns: 1fr; }
+    .concept-item + .concept-item { border-left: 0; border-top: 1px solid var(--line); }
+    .concept-item { padding: 14px 4px; }
+    .menu-grid { grid-template-columns: 1fr; }
+    .picks { grid-template-columns: 1fr; }
+    .access-row { grid-template-columns: 1fr 1fr; }
+    .band { padding: 48px 0; }
+    .drawer nav { grid-template-columns: 1fr; }
+    .bottom-bar {
+      display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 35;
+      background: var(--white); border-top: 1px solid var(--line);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); gap: 10px;
+    }
+    .bottom-bar .btn { flex: 1; }
+    footer.site { padding-bottom: 96px; }
+  }
+  @media (max-width: 560px) {
+    .access-row { grid-template-columns: 1fr; }
+    .lockup { width: 300px; height: 109px; }
+    .lockup img { width: 344px; height: 744px; left: -22px; top: -318px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="トップへ">
+      <span class="mark" aria-hidden="true"><img src="S__12591108_0.jpg" alt="" width="869" height="1880"></span>
+      <b>Re:Grace</b>
+    </a>
+    <div class="top-right">
+      <a class="top-reserve" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">予約する</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="サイトメニュー">
+  <nav>
+    <a href="#menu" data-close>メニュー</a>
+    <a href="staff.html" data-close>スタッフ</a>
+    <a href="#access" data-close>アクセス</a>
+    <a href="#book" data-close>予約</a>
+  </nav>
+  <div class="sub-links">
+    <button class="btn line sm" type="button" data-call>電話で相談する</button>
+    <a href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">ホットペッパービューティー</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="lockup" role="img" aria-label="Re:Grace HAIR SALON">
+        <img src="S__12591109_0.jpg" alt="" width="869" height="1880">
+      </div>
+      <div class="hero-copy">
+        <h2>岐阜市加納の美容院</h2>
+        <p>再現性の高いカットと髪質改善。メンズも、女性も。毎日のスタイリングが楽になる髪を一緒につくります。</p>
+        <div class="actions">
+          <a class="btn" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">空席を見て予約する</a>
+          <a class="btn line" href="#menu">メニューを見る</a>
+        </div>
+        <div class="facts">
+          <span>メンズ大歓迎</span>
+          <span>学割あり</span>
+          <span>駐車場2台</span>
+          <span>9:00〜20:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band beige">
+    <div class="wrap">
+      <div class="concept">
+        <div class="concept-item">
+          <img src="S__12599301_0.jpg" alt="鏡" width="64" height="64" loading="lazy">
+          <div>
+            <h3><mark>家でも</mark>再現できる</h3>
+            <p>どこから見ても整うカット。ご自宅での扱い方もお伝えします。</p>
+          </div>
+        </div>
+        <div class="concept-item">
+          <img src="S__12599300_0.jpg" alt="横顔の女性" width="64" height="64" loading="lazy">
+          <div>
+            <h3>似あわせを<mark>大切に</mark></h3>
+            <p>骨格や髪質を見て、その方に合うスタイルを一緒に考えます。</p>
+          </div>
+        </div>
+        <div class="concept-item">
+          <img src="S__12599299_0.jpg" alt="雫のあるツヤ髪" width="64" height="64" loading="lazy">
+          <div>
+            <h3>髪を<mark>傷めにくく</mark></h3>
+            <p>扱いやすいパーマや髪質改善で、ダメージを抑えた施術を心がけています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="menu">
+    <div class="wrap">
+      <div class="band-head">
+        <div>
+          <h2>メニュー・料金</h2>
+          <div class="eyebrow-text">料金は税込。土日祝は＋300円。ロングは料金が変わる場合があります。</div>
+        </div>
+      </div>
+
+      <div class="tabs" role="navigation" aria-label="メニューの分類">
+        <a href="#m-cut">カット</a>
+        <a href="#m-color">カラー</a>
+        <a href="#m-perm">パーマ</a>
+        <a href="#m-straight">縮毛矯正</a>
+        <a href="#m-treat">トリートメント</a>
+        <a href="#m-other">その他</a>
+      </div>
+
+      <div class="picks">
+        <div class="pick">
+          <small>オープン記念・一番人気</small>
+          <b>カット＋全体カラー</b>
+          <span>¥7,300<s>¥8,300</s></span>
+        </div>
+        <div class="pick">
+          <small>メンズ限定</small>
+          <b>カット＋Spa＋眉カット</b>
+          <span>¥5,500<s>¥7,100</s></span>
+        </div>
+        <div class="pick">
+          <small>学割（U-22）</small>
+          <b>学割デザインカット</b>
+          <span>¥3,200</span>
+        </div>
+      </div>
+      <p class="pick-note">オープン記念価格は期間限定の場合があります。最新の内容はご予約ページでご確認ください。</p>
+
+      <div class="menu-block" id="m-cut">
+        <h3>カット</h3>
+        <ul class="menu-grid">
+          <li><div>デザインカット<small>カットブロー</small></div><b>¥3,300</b></li>
+          <li><div>デザインカット＋シャンプー<small>カット＋シャンプー</small></div><b>¥3,800</b></li>
+          <li><div>学割★デザインカット<small>U-22 カットのみ（シャンプー付き＋500円）</small></div><b>¥3,200</b></li>
+          <li><div>フロントカット<small>前髪カット</small></div><b>¥1,000</b></li>
+          <li><div>刈り上げ<small>ツーブロックなどの部分的な刈り上げ</small></div><b>¥1,000</b></li>
+          <li><div>眉カット</div><b>¥1,000</b></li>
+          <li><div>カットメニューに＋シャンプー</div><b>¥500</b></li>
+        </ul>
+      </div>
+
+      <div class="menu-block" id="m-color">
+        <h3>カラー</h3>
+        <ul class="menu-grid">
+          <li><div>リタッチカラー<small>リタッチ幅3cm以内・シャンプー・ブロー込み</small></div><b>¥4,500</b></li>
+          <li><div>全体カラー<small>ロング（肩下）＋500円</small></div><b>¥5,000〜</b></li>
+          <li><div>ハイライト<small>オンカラーは別料金</small></div><b>¥5,500</b></li>
+          <li><div>リタッチブリーチ<small>3cmまで・単品</small></div><b>¥5,000</b></li>
+          <li><div>全体ブリーチ<small>単品・ロング＋500円</small></div><b>¥5,500〜</b></li>
+          <li><div>オンカラー<small>イヤリング・フェイスフレーミング部分</small></div><b>¥2,200</b></li>
+          <li><div>カラー剤変更<small>マニキュア・ヘナ＋500円、透明感カラー＋1,000円</small></div><b>¥500〜</b></li>
+        </ul>
+      </div>
+
+      <div class="menu-block" id="m-perm">
+        <h3>パーマ</h3>
+        <ul class="menu-grid">
+          <li><div>パーマ<small>シャンプー・ブロー込み</small></div><b>¥7,500</b></li>
+          <li><div>ポイントパーマ<small>前髪・顔まわりなど部分的に</small></div><b>¥6,000</b></li>
+          <li><div>ストレートパーマ</div><b>¥6,500〜</b></li>
+        </ul>
+      </div>
+
+      <div class="menu-block" id="m-straight">
+        <h3>縮毛矯正</h3>
+        <ul class="menu-grid">
+          <li><div>リタッチ縮毛矯正<small>半年分のリタッチの方</small></div><b>¥8,500</b></li>
+          <li><div>全体縮毛矯正<small>根元から毛先までかける方</small></div><b>¥9,500</b></li>
+          <li><div>ポイント縮毛矯正<small>顔まわり・襟足など部分的に</small></div><b>¥7,000</b></li>
+          <li><div>前髪縮毛矯正<small>前髪のみ</small></div><b>¥5,000</b></li>
+          <li><div>リタッチ酸性ストレート<small>半年分のリタッチの方</small></div><b>¥11,500</b></li>
+          <li><div>全体酸性ストレート<small>根元から毛先まで</small></div><b>¥12,500</b></li>
+        </ul>
+      </div>
+
+      <div class="menu-block" id="m-treat">
+        <h3>トリートメント</h3>
+        <ul class="menu-grid">
+          <li><div>活性ケラチントリートメント<small>髪の主成分のタンパク質で補修（シャンプー・ブロー別）</small></div><b>¥1,100</b></li>
+          <li><div>ダブルリペアトリートメント<small>内部と表面を補修（シャンプー・ブロー別）</small></div><b>¥2,200</b></li>
+          <li><div>酸熱トリートメント<small>熱でダメージを補修。持ちが良い</small></div><b>¥3,300</b></li>
+          <li><div>髪質改善システムトリートメント<small>髪の芯・中間・表面を補修。持ちが良い</small></div><b>¥4,400</b></li>
+          <li><div>髪質改善システムトリートメント（ホームケア付き）<small>ご自宅でのケアつき</small></div><b>¥5,500</b></li>
+        </ul>
+      </div>
+
+      <div class="menu-block" id="m-other">
+        <h3>その他</h3>
+        <ul class="menu-grid">
+          <li><div>Spa 10分コース<small>シャンプー・ブロー別</small></div><b>¥2,300</b></li>
+          <li><div>シャンプーブロー</div><b>¥2,000</b></li>
+          <li><div>シャンプー変更<small>5種の香りから選べます。エルシンカ＋200円</small></div><b>¥100〜</b></li>
+        </ul>
+      </div>
+      <p class="menu-note">そのほかのメニューとクーポンは、ご予約ページでご覧いただけます。</p>
+    </div>
+  </section>
+
+  <section class="band stone" id="access">
+    <div class="wrap">
+      <h2 style="margin-bottom:18px;">アクセス</h2>
+      <div class="access-row">
+        <div>
+          <h3>住所</h3>
+          <p>岐阜県岐阜市加納竜興町2丁目16<br>メゾンアルファ 1階</p>
+        </div>
+        <div>
+          <h3>行き方</h3>
+          <p>加納のドン・キホーテから南へ徒歩1分。バス停「加納高校前」から徒歩3分。</p>
+        </div>
+        <div>
+          <h3>営業時間・定休日</h3>
+          <p>9:00〜20:00（最終受付はメニューにより16:30〜19:30）<br>不定休（臨時休業あり）</p>
+        </div>
+        <div>
+          <h3>電話・駐車場</h3>
+          <p class="tel">058-214-3885</p>
+          <button class="btn line sm tel-btn" type="button" data-call>電話をかける</button>
+          <p style="margin-top:8px;">店舗前に2台</p>
+        </div>
+      </div>
+      <div class="access-links">
+        <a class="btn line sm" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%B2%90%E9%98%9C%E5%B8%82%E5%8A%A0%E7%B4%8D%E7%AB%9C%E8%88%88%E7%94%BA2%E4%B8%81%E7%9B%AE16+%E3%83%A1%E3%82%BE%E3%83%B3%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1" target="_blank" rel="noopener">地図アプリで開く</a>
+        <a class="btn line sm" href="staff.html">スタッフを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band sumi" id="book">
+    <div class="wrap book">
+      <div>
+        <h2>ご予約</h2>
+        <p>空席の確認と予約はホットペッパービューティーから。空席が「×」でも、お問い合わせいただければご相談できる場合があります。</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">空席を見て予約する</a>
+        <button class="btn line" type="button" data-call>電話する</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Re:Grace（リーグレイス）｜岐阜市加納竜興町2丁目16 メゾンアルファ</span>
+    <a href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<div class="bottom-bar" role="navigation" aria-label="電話と予約">
+  <button class="btn line" type="button" data-call>電話する</button>
+  <a class="btn" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">予約する</a>
+</div>
+
+<dialog class="call" id="callDialog" aria-labelledby="callTitle">
+  <h3 id="callTitle">お店に電話しますか？</h3>
+  <p>次の番号に電話をかけます。</p>
+  <div class="num">058-214-3885</div>
+  <div class="row">
+    <button class="btn line" type="button" id="callCancel">やめる</button>
+    <a class="btn" href="tel:0582143885">電話をかける</a>
+  </div>
+</dialog>
+
+<script>
+  (function () {
+    var burger = document.getElementById('burger');
+    var drawer = document.getElementById('drawer');
+
+    function setDrawer(open) {
+      drawer.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    burger.addEventListener('click', function () { setDrawer(!drawer.classList.contains('open')); });
+    drawer.querySelectorAll('[data-close]').forEach(function (a) {
+      a.addEventListener('click', function () { setDrawer(false); });
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setDrawer(false); });
+
+    var dialog = document.getElementById('callDialog');
+    document.getElementById('callCancel').addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+    document.querySelectorAll('[data-call]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setDrawer(false);
+        if (typeof dialog.showModal === 'function') { dialog.showModal(); }
+        else { window.location.href = 'tel:0582143885'; }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
