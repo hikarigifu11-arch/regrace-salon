@@ -113,15 +113,22 @@
   .btn.sm { min-height: 38px; padding: 0 14px; font-size: 13px; }
 
   /* Hero */
-  .hero { padding: 96px 0 56px; background: var(--white); }
+  .hero { padding: 96px 0 56px; background: var(--white); position: relative; overflow: hidden; }
+  .hero-deco { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+  .deco { position: absolute; mix-blend-mode: multiply; opacity: 0.14; }
+  .d1 { width: 220px; top: 4%; right: -40px; transform: rotate(12deg); }
+  .d2 { width: 250px; bottom: -40px; left: -60px; transform: rotate(-8deg); }
+  .d3 { width: 190px; top: 50%; right: 4%; transform: rotate(-14deg); }
+  .hero .wrap { position: relative; z-index: 1; }
   .hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
   .lockup { width: 340px; height: 123px; overflow: hidden; position: relative; margin: 0 auto; }
   .lockup img { position: absolute; width: 389px; height: 841px; max-width: none; left: -25px; top: -360px; }
-  .hero-copy p { color: var(--mute); margin: 14px 0 22px; max-width: 26em; }
+  .hero-copy { text-align: center; }
+  .hero-copy p { color: var(--mute); margin: 14px auto 22px; max-width: 26em; text-align: center; }
   .hero-copy .actions { display: flex; gap: 10px; flex-wrap: wrap; }
-  .facts { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 22px; font-size: 12px; color: var(--mute); }
-  .facts span { display: inline-flex; align-items: center; gap: 7px; }
-  .fact-ico { width: 20px; height: 20px; flex: none; }
+  .facts { display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px 16px; margin-top: 22px; font-size: 12px; color: var(--mute); white-space: nowrap; }
+  .facts span { display: inline-flex; align-items: center; gap: 3px; }
+  .fact-ico { width: 18px; height: 18px; flex: none; }
 
   /* Bands */
   .band { padding: 64px 0; }
@@ -142,6 +149,21 @@
     color: inherit; padding: 0 2px;
   }
   .concept-item p { font-size: 12px; color: var(--mute); line-height: 1.6; margin-top: 2px; }
+
+  /* Section decorations (faded illustrations) */
+  .band { position: relative; overflow: hidden; }
+  .band > .wrap { position: relative; z-index: 1; }
+  .bdeco { position: absolute; pointer-events: none; z-index: 0; opacity: 0.12; mix-blend-mode: multiply; }
+  .band.sumi .bdeco { filter: invert(1); mix-blend-mode: screen; opacity: 0.14; }
+  .bdeco-menu { width: 260px; top: 24px; right: -56px; transform: rotate(-8deg); }
+  .bdeco-acc-a { width: 190px; bottom: -36px; left: -36px; transform: rotate(10deg); }
+  .bdeco-acc-b { width: 150px; top: 18px; right: -22px; transform: rotate(-10deg); }
+  .bdeco-book { width: 230px; top: -26px; right: -30px; transform: rotate(8deg); }
+  .bdeco-acc-c { width: 130px; bottom: 10px; right: 12%; transform: rotate(-6deg); }
+  .bdeco-book-b { width: 210px; bottom: -44px; left: 6%; transform: rotate(-6deg); }
+  footer.site { position: relative; overflow: hidden; }
+  footer.site > .wrap { position: relative; z-index: 1; }
+  .bdeco-foot { width: 170px; top: -36px; right: 6%; transform: rotate(10deg); }
 
   /* Menu */
   .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
@@ -177,9 +199,16 @@
   .access-row .tel-btn { margin-top: 10px; }
   .access-links { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
 
+  /* Social and map icons */
+  .sns { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); color: var(--ink); text-decoration: none; flex: none; }
+  .sns svg { width: 18px; height: 18px; }
+  .map-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 12px; color: var(--ink); text-underline-offset: 3px; }
+  .map-link svg, .access-links svg { width: 15px; height: 15px; flex: none; }
+  .access-links .btn { gap: 6px; }
+
   /* Booking band */
   .book { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
-  .book p { font-size: 13px; color: #bdb7ad; max-width: 38em; }
+  .book p { font-size: 13px; color: #bdb7ad; max-width: 40em; }
   .book .actions { display: flex; gap: 10px; flex-wrap: wrap; }
   .band.sumi .btn { background: var(--white); color: var(--ink); border-color: var(--white); }
   .band.sumi .btn.line { background: transparent; color: var(--white); border-color: #6b665e; }
@@ -210,6 +239,9 @@
   @media (max-width: 900px) {
     .top-reserve { display: none; }
     .hero { padding: 84px 0 40px; }
+    .d1 { width: 130px; top: 2%; right: -24px; }
+    .d2 { width: 150px; bottom: -24px; left: -36px; }
+    .d3 { display: none; }
     .hero .wrap { grid-template-columns: 1fr; gap: 22px; text-align: center; }
     .hero-copy p { margin-left: auto; margin-right: auto; }
     .hero-copy .actions { justify-content: center; }
@@ -221,6 +253,9 @@
     .picks { grid-template-columns: 1fr; }
     .access-row { grid-template-columns: 1fr 1fr; }
     .band { padding: 48px 0; }
+    .bdeco-menu { width: 150px; top: 14px; right: -28px; }
+    .bdeco-acc-a, .bdeco-acc-b, .bdeco-acc-c, .bdeco-book, .bdeco-book-b { display: none; }
+    .bdeco-foot { width: 110px; }
     .drawer nav { grid-template-columns: 1fr; }
     .bottom-bar {
       display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 35;
@@ -231,6 +266,9 @@
     footer.site { padding-bottom: 96px; }
   }
   @media (max-width: 560px) {
+    .facts { gap: 4px 9px; font-size: 11px; }
+    .facts span { gap: 2px; }
+    .fact-ico { width: 14px; height: 14px; }
     .access-row { grid-template-columns: 1fr; }
     .lockup { width: 300px; height: 109px; }
     .lockup img { width: 344px; height: 744px; left: -22px; top: -318px; }
@@ -246,6 +284,7 @@
       <b>Re:Grace</b>
     </a>
     <div class="top-right">
+      <a class="sns" href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg></a>
       <a class="top-reserve" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">予約する</a>
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
         <span class="burger-open">MENU</span><span class="burger-close">CLOSE</span>
@@ -271,6 +310,11 @@
 <main>
 
   <section class="hero" id="hero">
+    <div class="hero-deco" aria-hidden="true">
+      <img class="deco d1" src="S__12599301_0.jpg" alt="">
+      <img class="deco d2" src="S__12599300_0.jpg" alt="">
+      <img class="deco d3" src="S__12599299_0.jpg" alt="">
+    </div>
     <div class="wrap">
       <div class="lockup" role="img" aria-label="Re:Grace HAIR SALON">
         <img src="S__12591109_0.jpg" alt="" width="869" height="1880">
@@ -321,11 +365,12 @@
   </section>
 
   <section class="band" id="menu">
+    <img class="bdeco bdeco-menu" src="S__12599299_0.jpg" alt="">
     <div class="wrap">
       <div class="band-head">
         <div>
           <h2>メニュー・料金</h2>
-          <div class="eyebrow-text">料金は税込。土日祝は＋300円。ロングは料金が変わる場合があります。</div>
+          <div class="eyebrow-text">料金は税込。土日祝は＋300円。<br>ロングは料金が変わる場合があります。</div>
         </div>
       </div>
 
@@ -423,25 +468,29 @@
           <li><div>シャンプー変更<small>5種の香りから選べます。エルシンカ＋200円</small></div><b>¥100〜</b></li>
         </ul>
       </div>
-      <p class="menu-note">そのほかのメニューとクーポンは、ご予約ページでご覧いただけます。</p>
+      <p class="menu-note">そのほかのメニューとクーポンは、<br>ご予約ページでご覧いただけます。</p>
     </div>
   </section>
 
   <section class="band stone" id="access">
+    <img class="bdeco bdeco-acc-a" src="parking.svg" alt="">
+    <img class="bdeco bdeco-acc-b" src="hours.svg" alt="">
+    <img class="bdeco bdeco-acc-c" src="S__12599301_0.jpg" alt="">
     <div class="wrap">
       <h2 style="margin-bottom:18px;">アクセス</h2>
       <div class="access-row">
         <div>
           <h3>住所</h3>
           <p>岐阜県岐阜市加納竜興町2丁目16<br>メゾンアルファ 1階</p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%B2%90%E9%98%9C%E5%B8%82%E5%8A%A0%E7%B4%8D%E7%AB%9C%E8%88%88%E7%94%BA2%E4%B8%81%E7%9B%AE16+%E3%83%A1%E3%82%BE%E3%83%B3%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>地図を開く</a>
         </div>
         <div>
           <h3>行き方</h3>
-          <p>加納のドン・キホーテから南へ徒歩1分。バス停「加納高校前」から徒歩3分。</p>
+          <p>加納のドン・キホーテから南へ徒歩1分。<br>バス停「加納高校前」から徒歩3分。</p>
         </div>
         <div>
           <h3>営業時間・定休日</h3>
-          <p>9:00〜20:00（最終受付はメニューにより16:30〜19:30）<br>不定休（臨時休業あり）</p>
+          <p>9:00〜20:00<br>（最終受付はメニューにより16:30〜19:30）<br>不定休（臨時休業あり）</p>
         </div>
         <div>
           <h3>電話・駐車場</h3>
@@ -451,17 +500,20 @@
         </div>
       </div>
       <div class="access-links">
-        <a class="btn line sm" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%B2%90%E9%98%9C%E5%B8%82%E5%8A%A0%E7%B4%8D%E7%AB%9C%E8%88%88%E7%94%BA2%E4%B8%81%E7%9B%AE16+%E3%83%A1%E3%82%BE%E3%83%B3%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1" target="_blank" rel="noopener">地図アプリで開く</a>
+        <a class="btn line sm" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%B2%90%E9%98%9C%E5%B8%82%E5%8A%A0%E7%B4%8D%E7%AB%9C%E8%88%88%E7%94%BA2%E4%B8%81%E7%9B%AE16+%E3%83%A1%E3%82%BE%E3%83%B3%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>地図アプリで開く</a>
+        <a class="btn line sm" href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>Instagram</a>
         <a class="btn line sm" href="staff.html">スタッフを見る</a>
       </div>
     </div>
   </section>
 
   <section class="band sumi" id="book">
+    <img class="bdeco bdeco-book" src="student-discount.svg" alt="">
+    <img class="bdeco bdeco-book-b" src="S__12599300_0.jpg" alt="">
     <div class="wrap book">
       <div>
         <h2>ご予約</h2>
-        <p>空席の確認と予約はホットペッパービューティーから。空席が「×」でも、お問い合わせいただければご相談できる場合があります。</p>
+        <p>空席の確認と予約はホットペッパービューティーから。<br>空席が「×」でも、お問い合わせいただければご相談できる場合があります。</p>
       </div>
       <div class="actions">
         <a class="btn" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">空席を見て予約する</a>
@@ -473,6 +525,7 @@
 </main>
 
 <footer class="site">
+  <img class="bdeco bdeco-foot" src="S__12599301_0.jpg" alt="">
   <div class="wrap">
     <span>Re:Grace（リグレイス）｜岐阜市加納竜興町2丁目16 メゾンアルファ</span>
     <a href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener">Instagram</a>
