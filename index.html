@@ -98,6 +98,12 @@
     padding: 20px 2px; border-bottom: 1px solid #d3c9ba;
     text-decoration: none; font-family: var(--serif); font-size: 18px; letter-spacing: 0.08em; color: var(--ink);
   }
+  .drawer-sns { margin-top: 18px; }
+  .drawer-sns-title { font-family: var(--serif); font-size: 11px; letter-spacing: 0.22em; color: var(--mute); margin: 0 0 10px; }
+  .drawer-sns-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .sns-item { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid #cfc6b8; border-radius: 999px; color: var(--ink); text-decoration: none; font-size: 13px; background: var(--white); }
+  .sns-item svg { width: 18px; height: 18px; flex: none; }
+  .hpb-mark { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); color: var(--white); font-family: var(--sans); font-size: 7px; font-weight: 700; letter-spacing: 0.02em; flex: none; }
   .drawer nav a::after { content: "→"; font-family: var(--sans); font-size: 13px; color: var(--clay); }
   .drawer .sub-links { font-size: 13px; color: var(--mute); display: flex; gap: 18px; flex-wrap: wrap; }
   .drawer .sub-links a { color: var(--mute); }
@@ -199,6 +205,13 @@
   .access-row .tel-btn { margin-top: 10px; }
   .access-links { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
 
+  .parking-photo { display: block; width: 100%; max-width: 220px; height: 130px; object-fit: cover; object-position: center 62%; border-radius: 8px; margin-top: 10px; }
+
+  /* Compact map */
+  .map-embed { margin-top: 16px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+  .map-embed iframe { display: block; width: 100%; height: 200px; border: 0; }
+  @media (max-width: 560px) { .map-embed iframe { height: 170px; } }
+
   /* Social and map icons */
   .sns { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); color: var(--ink); text-decoration: none; flex: none; }
   .sns svg { width: 18px; height: 18px; }
@@ -284,8 +297,8 @@
       <b>Re:Grace</b>
     </a>
     <div class="top-right">
-      <a class="sns" href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg></a>
       <a class="top-reserve" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">予約する</a>
+      <a class="sns" href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg></a>
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
         <span class="burger-open">MENU</span><span class="burger-close">CLOSE</span>
       </button>
@@ -302,8 +315,13 @@
   </nav>
   <div class="sub-links">
     <button class="btn line sm" type="button" data-call>電話で相談する</button>
-    <a href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">ホットペッパービューティー</a>
+    <div class="drawer-sns">
+      <p class="drawer-sns-title">SNS</p>
+      <div class="drawer-sns-list">
+        <a class="sns-item" href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+        <a class="sns-item" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener"><span class="hpb-mark">HPB</span><span>ホットペッパービューティー</span></a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -329,7 +347,7 @@
         <div class="facts">
           <span><img class="fact-ico" src="mens-cut.svg" alt="">メンズ大歓迎</span>
           <span><img class="fact-ico" src="student-discount.svg" alt="">学割あり</span>
-          <span><img class="fact-ico" src="parking.svg" alt="">駐車場2台</span>
+          <span><img class="fact-ico" src="parking.svg" alt="">駐車場3台</span>
           <span><img class="fact-ico" src="hours.svg" alt="">9:00〜20:00</span>
         </div>
       </div>
@@ -496,8 +514,12 @@
           <h3>電話・駐車場</h3>
           <p class="tel">058-214-3885</p>
           <button class="btn line sm tel-btn" type="button" data-call>電話をかける</button>
-          <p style="margin-top:8px;">店舗前に2台</p>
+          <p style="margin-top:8px;">店舗前に2台<br>店舗南側のアスファルト駐車場に1台<br>（店舗側・道路側のスペース）</p>
+          <img class="parking-photo" src="parking-lot.jpg" alt="店舗南側のアスファルト駐車場" loading="lazy">
         </div>
+      </div>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%B2%90%E9%98%9C%E5%B8%82%E5%8A%A0%E7%B4%8D%E7%AB%9C%E8%88%88%E7%94%BA2%E4%B8%81%E7%9B%AE16+%E3%83%A1%E3%82%BE%E3%83%B3%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1&output=embed" title="店舗の地図（岐阜市加納竜興町2丁目16）" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="access-links">
         <a class="btn line sm" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%90%E9%98%9C%E7%9C%8C%E5%B2%90%E9%98%9C%E5%B8%82%E5%8A%A0%E7%B4%8D%E7%AB%9C%E8%88%88%E7%94%BA2%E4%B8%81%E7%9B%AE16+%E3%83%A1%E3%82%BE%E3%83%B3%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>地図アプリで開く</a>
