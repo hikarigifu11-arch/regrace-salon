@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-title" content="リグレイス">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#ffffff">
 <title>Re:Grace（リグレイス）｜岐阜市加納の美容院</title>
 <meta name="description" content="岐阜市加納の美容院 Re:Grace（リグレイス）。再現性の高いカットと髪質改善。メンズ大歓迎、学割あり。">
 <meta property="og:title" content="Re:Grace（リグレイス）｜岐阜市加納の美容院">
@@ -69,25 +75,30 @@
     font-size: 12px; text-decoration: none; padding: 9px 14px; border: 1px solid var(--ink); color: var(--ink);
   }
   .burger {
-    width: 44px; height: 44px; background: none; border: 0; cursor: pointer;
-    display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
+    height: 36px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--ink); background: var(--white);
+    cursor: pointer; display: inline-flex; align-items: center; gap: 9px;
+    font-family: var(--serif); font-size: 12px; letter-spacing: 0.2em; color: var(--ink); transition: background 0.3s, color 0.3s;
   }
-  .burger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
-  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+  .burger::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--clay); }
+  .burger-close { display: none; }
+  .burger[aria-expanded="true"] { background: var(--ink); color: var(--white); }
+  .burger[aria-expanded="true"]::after { background: var(--clay); }
+  .burger[aria-expanded="true"] .burger-open { display: none; }
+  .burger[aria-expanded="true"] .burger-close { display: inline; }
 
   /* Drawer menu */
   .drawer {
-    position: fixed; inset: 0; z-index: 30; background: var(--white);
-    padding: 84px 22px 32px; display: none; flex-direction: column; justify-content: space-between;
+    position: fixed; inset: 0; z-index: 30; background: var(--beige);
+    padding: 84px 28px 36px; display: none; flex-direction: column; justify-content: space-between;
   }
   .drawer.open { display: flex; }
-  .drawer nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+  .drawer nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
   .drawer nav a {
-    display: block; padding: 18px 0; border-bottom: 1px solid var(--line);
-    text-decoration: none; font-family: var(--serif); font-size: 19px; color: var(--ink);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 2px; border-bottom: 1px solid #d3c9ba;
+    text-decoration: none; font-family: var(--serif); font-size: 18px; letter-spacing: 0.08em; color: var(--ink);
   }
+  .drawer nav a::after { content: "→"; font-family: var(--sans); font-size: 13px; color: var(--clay); }
   .drawer .sub-links { font-size: 13px; color: var(--mute); display: flex; gap: 18px; flex-wrap: wrap; }
   .drawer .sub-links a { color: var(--mute); }
 
@@ -109,8 +120,8 @@
   .hero-copy p { color: var(--mute); margin: 14px 0 22px; max-width: 26em; }
   .hero-copy .actions { display: flex; gap: 10px; flex-wrap: wrap; }
   .facts { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 22px; font-size: 12px; color: var(--mute); }
-  .facts span { padding-left: 12px; position: relative; }
-  .facts span::before { content: ""; position: absolute; left: 0; top: 9px; width: 4px; height: 4px; background: var(--clay); border-radius: 50%; }
+  .facts span { display: inline-flex; align-items: center; gap: 7px; }
+  .fact-ico { width: 20px; height: 20px; flex: none; }
 
   /* Bands */
   .band { padding: 64px 0; }
@@ -124,7 +135,7 @@
   .concept { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); }
   .concept-item { display: flex; align-items: center; gap: 14px; padding: 18px 20px 4px; }
   .concept-item + .concept-item { border-left: 1px solid var(--line); }
-  .concept-item img { width: 56px; height: 56px; flex: none; object-fit: contain; mix-blend-mode: multiply; }
+  .concept-item img { width: 44px; height: 44px; flex: none; object-fit: contain; mix-blend-mode: multiply; opacity: 0.85; }
   .concept-item h3 { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.5; }
   .concept-item h3 mark {
     background: linear-gradient(transparent 91%, #b49a7a 91%, #b49a7a 100%, transparent 100%);
@@ -237,7 +248,7 @@
     <div class="top-right">
       <a class="top-reserve" href="https://beauty.hotpepper.jp/slnH000808643/" target="_blank" rel="noopener">予約する</a>
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
+        <span class="burger-open">MENU</span><span class="burger-close">CLOSE</span>
       </button>
     </div>
   </div>
@@ -272,10 +283,10 @@
           <a class="btn line" href="#menu">メニューを見る</a>
         </div>
         <div class="facts">
-          <span>メンズ大歓迎</span>
-          <span>学割あり</span>
-          <span>駐車場2台</span>
-          <span>9:00〜20:00</span>
+          <span><img class="fact-ico" src="mens-cut.svg" alt="">メンズ大歓迎</span>
+          <span><img class="fact-ico" src="student-discount.svg" alt="">学割あり</span>
+          <span><img class="fact-ico" src="parking.svg" alt="">駐車場2台</span>
+          <span><img class="fact-ico" src="hours.svg" alt="">9:00〜20:00</span>
         </div>
       </div>
     </div>
@@ -463,7 +474,7 @@
 
 <footer class="site">
   <div class="wrap">
-    <span>Re:Grace（リーグレイス）｜岐阜市加納竜興町2丁目16 メゾンアルファ</span>
+    <span>Re:Grace（リグレイス）｜岐阜市加納竜興町2丁目16 メゾンアルファ</span>
     <a href="https://www.instagram.com/regrace_2026.06" target="_blank" rel="noopener">Instagram</a>
   </div>
 </footer>
